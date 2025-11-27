@@ -5,21 +5,18 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { AppColors } from '@/constants/theme';
 
 const Logo = () => {
-    const router = useRouter(); // pour la navigation entre les differents écrans/pages
+    const router = useRouter(); // permet la navigation entre les différents écrans/pages
   return (
     <TouchableOpacity style={styles.logoView} onPress={() => router.push("/")}> 
-    
-    
-    {/* TouchableOpacity = conteneur qui rend son contenu cliquable + effet visuel d'opacité quand on appuie dessus, même réaction sur ios et android par rapport à button / 
-    Attention tt le contenu devient cliquable // onPress car on est sur mobile, pas de onclick // au clic prend le router pour aller sur la home page
+    {/* TouchableOpacity est un conteneur qui rend son contenu cliquable + effet visuel d'opacité quand on appuie dessus 
+    réagit pareil sur ios et android comparé a button / tout le contenu devient cliquable donc attention 
+    onPress pcq on est sur mobile, pas de onclick / prend le router pour aller sur la home page quand on clique dessus
     */}
-
-
         <MaterialIcons
             name="shopping-cart" 
             size={25}
             color={AppColors.primary[700]}
-        /> {/*  autre librairie d'icones */}
+        /> {/* Une autre librairie d'icons */}
         <Text style={styles.logoText}>Shop&Go</Text>
     </TouchableOpacity>
   )
